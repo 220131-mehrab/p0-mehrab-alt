@@ -21,6 +21,7 @@ public class AppContext {
         server = new Tomcat();
         server.getConnector();
         server.addContext("", null);
+        server.addServlet("", "defaultServlet", new DefaultController()).addMapping("/*");
         server.addServlet("", "artistServlet", artistController).addMapping("/artists");
         try {
             connection = DriverManager.getConnection("jdbc:h2:mem:", "chinook", "chinook");

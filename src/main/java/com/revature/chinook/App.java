@@ -9,6 +9,7 @@ public class App {
         // Serve on Tomcat server
         try {
             AppContext.getTomcat().start();
+            AppContext.getTomcat().getServer().await();
         } catch (LifecycleException e) {
             System.err.println("Embedded server failed to start!");
         }

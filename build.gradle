@@ -1,6 +1,8 @@
 plugins {
-    id 'java'
+    id 'application'
 }
+
+mainClassName = 'com.revature.chinook.App'
 
 group 'com.revature'
 version '1.0-SNAPSHOT'
